@@ -1,0 +1,14 @@
+D:\C#\Home_expenses\Session\bin\Release\Session.dll
+D:\C#\Home_expenses\Session\bin\Release\Session.pdb
+D:\C#\Home_expenses\Session\bin\Release\Domain.dll
+D:\C#\Home_expenses\Session\bin\Release\Domain.pdb
+D:\C#\Home_expenses\Session\obj\Release\Session.csprojResolveAssemblyReference.cache
+D:\C#\Home_expenses\Session\obj\Release\Session.dll
+D:\C#\Home_expenses\Session\obj\Release\Session.pdb
+D:\C#\to_git\Home_expenses\Session\bin\Release\Session.dll
+D:\C#\to_git\Home_expenses\Session\bin\Release\Session.pdb
+D:\C#\to_git\Home_expenses\Session\bin\Release\Domain.dll
+D:\C#\to_git\Home_expenses\Session\bin\Release\Domain.pdb
+D:\C#\to_git\Home_expenses\Session\obj\Release\Session.csprojResolveAssemblyReference.cache
+D:\C#\to_git\Home_expenses\Session\obj\Release\Session.dll
+D:\C#\to_git\Home_expenses\Session\obj\Release\Session.pdb

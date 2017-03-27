@@ -1,0 +1,10 @@
+D:\C#\Home_expenses\Domain\bin\Debug\Domain.dll
+D:\C#\Home_expenses\Domain\bin\Debug\Domain.pdb
+D:\C#\Home_expenses\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+D:\C#\Home_expenses\Domain\obj\Debug\Domain.dll
+D:\C#\Home_expenses\Domain\obj\Debug\Domain.pdb
+D:\C#\to_git\Home_expenses\Domain\bin\Debug\Domain.dll
+D:\C#\to_git\Home_expenses\Domain\bin\Debug\Domain.pdb
+D:\C#\to_git\Home_expenses\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+D:\C#\to_git\Home_expenses\Domain\obj\Debug\Domain.dll
+D:\C#\to_git\Home_expenses\Domain\obj\Debug\Domain.pdb
