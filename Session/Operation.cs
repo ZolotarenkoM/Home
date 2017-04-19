@@ -9,7 +9,7 @@ namespace Session
     public class Operation
     {
         /// <summary>
-        /// Class for Implementation operations
+        /// Class with describes all operations
         /// </summary>
         SqlConnection cn;
         SqlCommand cm;
@@ -107,7 +107,7 @@ namespace Session
         }
 
         /// <summary>
-        /// Method for select from db product and save in List<Product>
+        /// Method for select from database product and save in List<Product>
         /// </summary>
         public List<Product> Select(ref bool day, ref bool mounth, ref DateTime date, ref string type)
         {

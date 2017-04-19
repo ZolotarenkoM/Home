@@ -6,6 +6,9 @@ using Session;
 
 namespace Home_expenses
 {
+    /// <summary>
+    /// Class where implement all operations on items
+    /// </summary>
     public partial class Form1 : Form
     {
         internal Log MyLog = new Log();
@@ -33,7 +36,9 @@ namespace Home_expenses
             Close();
         }
 
-        // Add some product to list
+        /// <summary>
+        /// Method for Add some product to listView (not database)
+        /// </summary>
         private void button_add_product_Click(object sender, EventArgs e)
         {
             try
@@ -69,7 +74,7 @@ namespace Home_expenses
                 CountOfProducts.Text = CountOfProducts.Minimum.ToString();
             }
         }
-        // end add product
+        
 
         private void MenuExit_Click(object sender, EventArgs e)
         {
@@ -82,6 +87,9 @@ namespace Home_expenses
                             @"author: M.Zolotarenko", @"Information");
         }
 
+        /// <summary>
+        /// Method for reset all products from listView (not database)
+        /// </summary>
         private void button_Reset_Click(object sender, EventArgs e)
         {
             listView_Item.Items.Clear();
@@ -89,7 +97,9 @@ namespace Home_expenses
             price = 0;
         }
 
-        //Save to db
+        /// <summary>
+        /// Method for save items in listView to database
+        /// </summary>
         private void button_Save_Click(object sender, EventArgs e)
         {
             Product p = new Product();
@@ -107,7 +117,9 @@ namespace Home_expenses
             MessageBox.Show(@"Saved successfully", @"Info");
         }
 
-        //Select our product by our resp.
+        /// <summary>
+        /// Method for select our products from database
+        /// </summary>
         private void button_Select_Click(object sender, EventArgs e)
         {
             price = 0;
@@ -129,10 +141,13 @@ namespace Home_expenses
                 listView_select.Items.Add(list);
                 price += Convert.ToDouble(a.TotalPrice.ToString());
             }
-            Total_Price_Select.Text = price.ToString("F");//show total price
+            //show total price
+            Total_Price_Select.Text = price.ToString("F");  
         }
 
-        //clear table with all product
+        /// <summary>
+        /// Method for clear all products from database!!!
+        /// </summary>
         private void button_clear_table_Click(object sender, EventArgs e)
         {
             op.Clear_table();
@@ -140,7 +155,9 @@ namespace Home_expenses
             button_Select_Click(this, EventArgs.Empty);
         }
 
-        //reset view
+        /// <summary>
+        /// reset listView (not database)
+        /// </summary>
         private void button_Reset_Select_Click(object sender, EventArgs e)
         {
             listView_select.Items.Clear();
@@ -148,7 +165,9 @@ namespace Home_expenses
             price = 0;
         }
 
-        //remove selected product
+        /// <summary>
+        /// Method for remove selected product from listView (not database) 
+        /// </summary>
         private void button_Remove_Click(object sender, EventArgs e)
         {
             if (listView_Item.SelectedItems.Count == 0) return;
@@ -162,7 +181,9 @@ namespace Home_expenses
             button_Save_Click(sender, e);
         }
 
-        //remove selected product from db
+        /// <summary>
+        /// Method for remove selected product from database 
+        /// </summary>
         private void button_remove_from_db_Click(object sender, EventArgs e)
         {
             Product p = new Product();

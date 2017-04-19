@@ -31,24 +31,26 @@ namespace Home_expenses
             {
                 try
                 {
-                    SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|Mushko_Home_BD.mdf;Integrated Security=True");
-                    SqlDataAdapter sda = new SqlDataAdapter("select count(*) from [User] where UserName='" + textBox_login2.Text + "' and Password='" + textBox_pass2.Text + "'", cn);
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    if (dt.Rows[0][0].ToString() == "1")
+                    using (SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|Mushko_Home_BD.mdf;Integrated Security=True"))
                     {
-                        Hide();
-                        Form1 list = new Form1();
-                        Form1.login = textBox_login2.Text;
-                        list.MyLog.Write("Sign by \"" + Form1.login + "\"");    //write log
-                        list.ShowDialog();
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show(@"Wrong password!", @"Error!!!");
-                        count++;
-                        textBox_pass2.Clear();
+                        SqlDataAdapter sda = new SqlDataAdapter("select count(*) from [User] where UserName='" + textBox_login2.Text + "' and Password='" + textBox_pass2.Text + "'", cn);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        if (dt.Rows[0][0].ToString() == "1")
+                        {
+                            Hide();
+                            Form1 list = new Form1();
+                            Form1.login = textBox_login2.Text;
+                            list.MyLog.Write("Sign by \"" + Form1.login + "\"");    //write log
+                            list.ShowDialog();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(@"Wrong password!", @"Error!!!");
+                            count++;
+                            textBox_pass2.Clear();
+                        }
                     }
                 }
                 catch (SqlException ex)
