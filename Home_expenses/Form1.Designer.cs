@@ -114,14 +114,14 @@
             // MenuSave
             // 
             this.MenuSave.Name = "MenuSave";
-            this.MenuSave.Size = new System.Drawing.Size(152, 22);
+            this.MenuSave.Size = new System.Drawing.Size(98, 22);
             this.MenuSave.Text = "Save";
             this.MenuSave.Click += new System.EventHandler(this.MenuSave_Click);
             // 
             // MenuExit
             // 
             this.MenuExit.Name = "MenuExit";
-            this.MenuExit.Size = new System.Drawing.Size(152, 22);
+            this.MenuExit.Size = new System.Drawing.Size(98, 22);
             this.MenuExit.Text = "Exit";
             this.MenuExit.Click += new System.EventHandler(this.MenuExit_Click);
             // 
@@ -136,7 +136,7 @@
             // MenuAbout
             // 
             this.MenuAbout.Name = "MenuAbout";
-            this.MenuAbout.Size = new System.Drawing.Size(152, 22);
+            this.MenuAbout.Size = new System.Drawing.Size(107, 22);
             this.MenuAbout.Text = "About";
             this.MenuAbout.Click += new System.EventHandler(this.MenuAbout_Click);
             // 
@@ -183,9 +183,9 @@
             // 
             this.button_List_exit.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_List_exit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_List_exit.Location = new System.Drawing.Point(857, 27);
+            this.button_List_exit.Location = new System.Drawing.Point(810, 25);
             this.button_List_exit.Name = "button_List_exit";
-            this.button_List_exit.Size = new System.Drawing.Size(50, 23);
+            this.button_List_exit.Size = new System.Drawing.Size(60, 23);
             this.button_List_exit.TabIndex = 20;
             this.button_List_exit.Text = "Exit";
             this.button_List_exit.UseVisualStyleBackColor = true;

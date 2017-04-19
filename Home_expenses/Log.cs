@@ -3,7 +3,9 @@ using System.IO;
 
 namespace Home_expenses
 {
-    //class for saved log file
+    /// <summary>
+    /// Class for saved log file
+    /// </summary>
     class Log
     {
         public void Write(string mes)

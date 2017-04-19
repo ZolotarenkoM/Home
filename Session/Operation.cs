@@ -8,7 +8,9 @@ namespace Session
 {
     public class Operation
     {
-
+        /// <summary>
+        /// Class for Implementation operations
+        /// </summary>
         SqlConnection cn;
         SqlCommand cm;
 
@@ -23,6 +25,9 @@ namespace Session
             ConnectTo();
         }
 
+        /// <summary>
+        /// Method for insert item to database
+        /// </summary>
         public void Insert(Product p)
         {
             try
@@ -49,6 +54,9 @@ namespace Session
             }
         }
 
+        /// <summary>
+        /// Method for delete selected item from database
+        /// </summary>
         public void Delete(Product p)
         {
             try
@@ -72,7 +80,9 @@ namespace Session
             }
         }
 
-        //clear table with all product
+        /// <summary>
+        /// Method for clear table with all product
+        /// </summary>
         public void Clear_table()
         {
             try
@@ -96,7 +106,9 @@ namespace Session
             }
         }
 
-        //Select from db product and save in List<Product>
+        /// <summary>
+        /// Method for select from db product and save in List<Product>
+        /// </summary>
         public List<Product> Select(ref bool day, ref bool mounth, ref DateTime date, ref string type)
         {
             var prodList = new List<Product>();
@@ -168,7 +180,9 @@ namespace Session
             }
         }
 
-        //Register user
+        /// <summary>
+        /// Method for register user
+        /// </summary>
         public void SignUp(Users u)
         {
             try
@@ -195,7 +209,9 @@ namespace Session
             }
         }
 
-        //Clear all users in table
+        /// <summary>
+        /// Method for clear all users from base
+        /// </summary>
         public void ClearUsers()
         {
             try

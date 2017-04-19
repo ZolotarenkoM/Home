@@ -2,6 +2,9 @@
 
 namespace Domain
 {
+    /// <summary>
+    /// Class describes product properties
+    /// </summary>
     public class Product
     {
         string id;

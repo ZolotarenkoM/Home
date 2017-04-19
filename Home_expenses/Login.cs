@@ -9,6 +9,9 @@ namespace Home_expenses
 {
     public partial class Login : Form
     {
+        /// <summary>
+        /// Class for authorization user
+        /// </summary>
         public Login()
         {
             InitializeComponent();
@@ -19,7 +22,9 @@ namespace Home_expenses
         Log MyLog = new Log();
         int count = 1;
 
-        //Checked user (give 3 attempts)
+        /// <summary>
+        /// Identification user in database (give 3 attempts)
+        /// </summary>
         private void button_sign2_Click(object sender, EventArgs e)
         {
             if (count < 3)
@@ -35,7 +40,7 @@ namespace Home_expenses
                         Hide();
                         Form1 list = new Form1();
                         Form1.login = textBox_login2.Text;
-                        list.MyLog.Write("Sign by \"" + Form1.login + "\"");//write log
+                        list.MyLog.Write("Sign by \"" + Form1.login + "\"");    //write log
                         list.ShowDialog();
                         Close();
                     }
@@ -65,7 +70,9 @@ namespace Home_expenses
             Close();
         }
 
-        //Method for registered user
+        /// <summary>
+        /// Registering user
+        /// </summary>
         private void button_signUP_Click(object sender, EventArgs e)
         {
             try
@@ -104,7 +111,9 @@ namespace Home_expenses
             }
         }
 
-        //Clear all users in table
+        /// <summary>
+        /// Clear all users in database
+        /// </summary>
         private void button_clear_user_Click(object sender, EventArgs e)
         {
             try
