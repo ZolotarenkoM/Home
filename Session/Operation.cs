@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using Domain;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Session
 {
@@ -156,7 +158,7 @@ namespace Session
                                 Id = dr[0].ToString(),
                                 Name = dr[1].ToString(),
                                 Price = float.Parse(dr[2].ToString()),
-                                Count = (int) dr[3],
+                                Count = (int)dr[3],
                                 TotalPrice = float.Parse(dr[4].ToString()),
                                 Type = dr[5].ToString(),
                                 Date = Convert.ToDateTime(dr[6].ToString().Substring(0, 10))
@@ -208,6 +210,21 @@ namespace Session
                 }
             }
         }
+
+        /// <summary>
+        /// Method for make hashcode from string value
+        /// </summary>
+        public string GetHashString(string str)
+        {
+            byte[] bytes = Encoding.Unicode.GetBytes(str);
+            MD5CryptoServiceProvider csp = new MD5CryptoServiceProvider();
+            byte[] byteHash = csp.ComputeHash(bytes);
+            string hash = string.Empty;
+            foreach (byte b in byteHash)
+                hash += string.Format("{0:x2}", b);
+            return hash;
+        }
+
 
         /// <summary>
         /// Method for clear all users from base

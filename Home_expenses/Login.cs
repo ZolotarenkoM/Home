@@ -33,7 +33,8 @@ namespace Home_expenses
                 {
                     using (SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|Mushko_Home_BD.mdf;Integrated Security=True"))
                     {
-                        SqlDataAdapter sda = new SqlDataAdapter("select count(*) from [User] where UserName='" + textBox_login2.Text + "' and Password='" + textBox_pass2.Text + "'", cn);
+                        string pass = op.GetHashString(textBox_pass2.Text);
+                        SqlDataAdapter sda = new SqlDataAdapter("select count(*) from [User] where UserName='" + textBox_login2.Text + "' and Password='" + pass + "'", cn);
                         DataTable dt = new DataTable();
                         sda.Fill(dt);
                         if (dt.Rows[0][0].ToString() == "1")
@@ -81,10 +82,11 @@ namespace Home_expenses
             {
                 if (!string.IsNullOrEmpty(textBox_login2.Text))
                 {
+                    string pass = op.GetHashString(textBox_pass2.Text);
                     Users u = new Users
                     {
                         User = textBox_login2.Text,
-                        Passwd = textBox_pass2.Text
+                        Passwd = pass
                     };
                     op.SignUp(u);
                     MessageBox.Show(@"User registered successfully");
